@@ -1,12 +1,12 @@
 {
-  "routes" : [
-        {
-            "src": "/",
-            "dest": "/"
-        }, 
-        {
-             "src": "/test",
-            "dest": "/api/test"
-        }
-  ]
+  "version": 2,
+  "builds": [
+    { "src": "index.js", "use": "@vercel/node" }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "/" }
+  ],
+  "env": {
+    "MONGO_URL": "mongodb+srv://suraz_bissoyi:Suraz%402003@cluster0.eaorh6c.mongodb.net/ecommerce-mern?retryWrites=true&w=majority&appName=Cluster0"
+  }
 }
