@@ -1,4 +1,12 @@
 {
-      "src": "/",
-      "dest": "/"
+  "routes" : [
+        {
+            "src": "/",
+            "dest": "/"
+        }, 
+        {
+             "src": "/test",
+            "dest": "/api/test"
+        }
+  ]
 }
