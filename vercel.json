@@ -4,6 +4,13 @@
     { "src": "index.js", "use": "@vercel/node" }
   ],
   "routes": [
-    { "src": "/(.*)", "dest": "/index.js" }
-  ]
+    { "handle": "filesystem" },
+    {
+      "src": "/(.*)",
+      "dest": "/index.js"
+    }
+  ],
+  "env": {
+    "MONGO_URL": "mongodb+srv://suraz_bissoyi:Suraz%402003@cluster0.eaorh6c.mongodb.net/ecommerce-mern?retryWrites=true&w=majority&appName=Cluster0"
+  }
 }
