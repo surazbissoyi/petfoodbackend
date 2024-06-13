@@ -15,8 +15,11 @@ app.use(cors());
 
 // Ensure upload directory exists
 const uploadDir = './upload/images';
-if (!fs.existsSync(uploadDir)) {
+try {
     fs.mkdirSync(uploadDir, { recursive: true });
+    console.log("Upload directory created successfully.");
+} catch (err) {
+    console.error("Error creating upload directory:", err);
 }
 
 
