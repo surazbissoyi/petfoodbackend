@@ -13,6 +13,13 @@ require('dotenv').config()
 app.use(express.json());
 app.use(cors());
 
+const uploadDir = './upload/images';
+try {
+    fs.mkdirSync(uploadDir, { recursive: true });
+    console.log("Upload directory created successfully.");
+} catch (err) {
+        console.error("Error creating upload directory:", err);
+}
 
 // Database connection with MongoDB
 mongoose.connect(process.env.MONGO_URL)
